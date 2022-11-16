@@ -1,3 +1,5 @@
+                    $offset = $request->number_of_items* ($request->page - 1);
+
         // for data paginate
         return Helpers::product_data_formatting(Product::active()->where(['brand_id' => $brand_id])->skip($offset)->take($limit)->get(), true);
 
