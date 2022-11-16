@@ -1,3 +1,9 @@
+        // for data paginate
+        return Helpers::product_data_formatting(Product::active()->where(['brand_id' => $brand_id])->skip($offset)->take($limit)->get(), true);
+
+
+
+
 # bulksms
 // for route
   // start  for phone verify auth
